@@ -9,24 +9,100 @@
   <script src="https://jeromeetienne.github.io/AR.js/aframe/build/aframe-ar.js"></script>
 </head>
 
-<body>
+<body style="margin: 0px; overflow: hidden;">
   <a-scene embedded arjs>
     <a-assets>
       <img id="groundTexture" src="https://cdn.aframe.io/a-painter/images/floor.jpg" crossorigin="anonymous">
       <img id="skyTexture" src="https://cdn.aframe.io/a-painter/images/sky.jpg" crossorigin="anonymous">
     </a-assets>
 
-    <!-- Primitives. -->
-    <a-box position="-1 0.6 -3" rotation="0 45 0" color="#4CC3D9"></a-box>
-    <a-sphere position="0 1.35 -5" radius="1.25" color="#EF2D5E"></a-sphere>
-    <a-cylinder position="1 0.85 -3" radius="0.5" height="1.5" color="#FFC65D"></a-cylinder>
-    <a-plane position="0 .1 -4" rotation="-90 0 0" width="4" height="4" color="#7BC8A4"></a-plane>
+    <a-box position='0 0.5 0' material='opacity: 0.5;'></a-box>
 
-    <!-- Background sky. -->
-    <a-sky height="2048" radius="30" src="#skyTexture" theta-length="90" width="2048"></a-sky>
+    <!-- Solar system -->
+    <a-sphere position="0 0 0" radius="1" color="yellow"></a-sphere>
+    <a-entity position="0 0 0">
+      <a-sphere scale=".4 .4 .4" position="0 0 -4" id="Mercury"
+        src="https://raw.githubusercontent.com/EmleeAnderson/image-hosting/master/2k_mercury.jpg">
+        <a-animation attribute="rotation" dur="2000" from="0 0 0" to="0 360 0" repeat="indefinite" delay="0"
+          easing="linear"></a-animation>
+      </a-sphere>
+      <a-animation attribute="rotation" dur="1000" from="0 0 0" to="0 360 0" repeat="indefinite" delay="0"
+        easing="linear"></a-animation>
+    </a-entity>
+    <a-entity position="0 0 0">
+      <a-sphere scale=".9 .9 .9" position="0 1 -7" id="Venus"
+        src="https://raw.githubusercontent.com/EmleeAnderson/image-hosting/master/VENUS.jpg">
+        <a-animation attribute="rotation" dur="2000" from="0 0 0" to="0 360 0" repeat="indefinite" delay="0"
+          easing="linear"></a-animation>
+      </a-sphere>
+      <a-animation attribute="rotation" dur="3000" from="0 0 0" to="0 360 0" repeat="indefinite" delay="0"
+        easing="linear"></a-animation>
+    </a-entity>
+    <a-entity position="0 0 0">
+      <a-sphere scale="1 1 1" position="0 1 -10" id="Earth"
+        src="https://raw.githubusercontent.com/EmleeAnderson/image-hosting/master/EARTH.jpg">
+        <a-sphere scale="0.25 0.25 0.25" position="0 0 -2" id="Earths-moon"
+          src="https://raw.githubusercontent.com/EmleeAnderson/image-hosting/master/Earths%20moon.jpg">
+          <a-animation attribute="rotation" dur="2000" from="0 1 -4" to="0 360 0" repeat="indefinite" delay="0"
+            easing="linear"></a-animation>
+        </a-sphere>
+        <a-animation attribute="rotation" dur="5000" from="0 0 0" to="0 360 0" repeat="indefinite" delay="0"
+          easing="linear"></a-animation>
 
-    <!-- Ground. -->
-    <a-circle src="#groundTexture" rotation="-90 0 0" radius="32"></a-circle>
+        <a-animation attribute="rotation" dur="2000" from="0 0 0" to="0 360 0" repeat="indefinite" delay="0"
+          easing="linear"></a-animation>
+      </a-sphere>
+      <a-animation attribute="rotation" dur="5000" from="0 0 0" to="0 360 0" repeat="indefinite" delay="0"
+        easing="linear"></a-animation>
+    </a-entity>
+    <a-entity>
+      <a-sphere scale="9.5 9.5 9.5" position="0 1 -96" id="Saturn"
+        src="https://raw.githubusercontent.com/EmleeAnderson/image-hosting/master/Saturn.jpg">
+        <a-animation attribute="rotation" dur="2000" from="0 0 0" to="0 360 0" repeat="indefinite" delay="0"
+          easing="linear"></a-animation>
+      </a-sphere>
+      <a-animation attribute="rotation" dur="7000" from="0 0 0" to="0 360 0" repeat="indefinite" delay="0"
+        easing="linear"></a-animation>
+    </a-entity>
+    <a-entity>
+      <a-sphere scale=".5 .5 .5" position="0 1 -15" id="Mars"
+        src="https://raw.githubusercontent.com/EmleeAnderson/image-hosting/master/MARS.jpg">
+        <a-animation attribute="rotation" dur="2000" from="0 0 0" to="0 360 0" repeat="indefinite" delay="0"
+          easing="linear"></a-animation>
+      </a-sphere>
+      <a-animation attribute="rotation" dur="5200" from="0 0 0" to="0 360 0" repeat="indefinite" delay="0"
+        easing="linear"></a-animation>
+    </a-entity>
+
+    <a-entity>
+      <a-sphere scale="11.2 11.2 11.2" position="0 1 -52" id="jupiter"
+        src="https://spaceshw.github.io/image/jupiter.jpg">
+        <a-animation attribute="rotation" dur="2000" from="0 0 0" to="0 360 0" repeat="indefinite" delay="0"
+          easing="linear"></a-animation>
+      </a-sphere>
+      <a-animation attribute="rotation" dur="5500" from="0 0 0" to="0 360 0" repeat="indefinite" delay="0"
+        easing="linear"></a-animation>
+    </a-entity>
+    <a-entity>
+      <a-sphere scale="3.9 3.9 3.9" position="0 1 -301" id="Neptune"
+        src="https://raw.githubusercontent.com/EmleeAnderson/image-hosting/master/2k_neptune.jpg">
+        <a-animation attribute="rotation" dur="2000" from="0 0 0" to="0 360 0" repeat="indefinite" delay="0"
+          easing="linear"></a-animation>
+      </a-sphere>
+      <a-animation attribute="rotation" dur="100000" from="0 0 0" to="0 360 0" repeat="indefinite" delay="0"
+        easing="linear"></a-animation>
+    </a-entity>
+
+    <a-entity>
+      <a-sphere scale="4 4 4" position="0 1 -192" id="Uranus"
+        src="https://raw.githubusercontent.com/EmleeAnderson/image-hosting/master/Uranus.jpg">
+        <a-animation attribute="rotation" dur="2000" from="0 0 0" to="0 360 0" repeat="indefinite" delay="0"
+          easing="linear"></a-animation>
+      </a-sphere>
+      <a-animation attribute="rotation" dur="84000" from="0 0 0" to="0 360 0" repeat="indefinite" delay="0"
+        easing="linear"></a-animation>
+    </a-entity>
+
 
     <a-marker-camera preset="hiro"></a-marker-camera>
 
