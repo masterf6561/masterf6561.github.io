@@ -19,87 +19,69 @@
       <a-entity position="2 1 0" gltf-model="#spaceship" scale="0.1 0.1 0.1" rotatio="0 40.0 60.0"></a-entity>
 
       <!-- Solar system -->
-      <a-sphere id="Sun" position="0 1 0" radius="1" color="yellow"></a-sphere>
-      <a-entity position="0 0 0">
-        <a-sphere scale=".4 .4 .4" position="-4 1 0" id="Mercury"
-          src="https://raw.githubusercontent.com/EmleeAnderson/image-hosting/master/2k_mercury.jpg">
-          <a-animation attribute="rotation" dur="2000" from="0 0 0" to="0 360 0" repeat="indefinite" delay="0"
-            easing="linear"></a-animation>
+      <a-sphere id="Sun" position="0 1 0" radius="1" src="./assets/sun.jpg"></a-sphere>
+      <a-entity animation="property:rotation; dur: 1000; from: 0 0 0; to: 0 360 0; loop: true; delay: 0; easing: linear"
+        position="0 0 0">
+        <a-sphere
+          animation="property:rotation; dur: 1000; from: 0 0 0; to: 0 360 0; loop: true; delay: 0; easing: linear"
+          scale=".4 .4 .4" position="-4 1 0" id="Mercury" src="./assets/mercury.jpg">
         </a-sphere>
-        <a-animation attribute="rotation" dur="1000" from="0 0 0" to="0 360 0" repeat="indefinite" delay="0"
-          easing="linear"></a-animation>
       </a-entity>
-      <a-entity position="0 0 0">
-        <a-sphere scale=".9 .9 .9" position="-7 1 0" id="Venus"
-          src="https://raw.githubusercontent.com/EmleeAnderson/image-hosting/master/VENUS.jpg">
-          <a-animation attribute="rotation" dur="2000" from="0 0 0" to="0 360 0" repeat="indefinite" delay="0"
-            easing="linear"></a-animation>
+      <a-entity animation="property:rotation; dur: 3000; from: 0 0 0; to: 0 360 0; loop: true; delay: 0; easing: linear"
+        position="0 0 0">
+        <a-sphere
+          animation="property:rotation; dur: 2000; from: 0 0 0; to: 0 360 0; loop: true; delay: 0; easing: linear"
+          scale=".9 .9 .9" position="-7 1 0" id="Venus" src="./assets/venus.jpg">
         </a-sphere>
-        <a-animation attribute="rotation" dur="3000" from="0 0 0" to="0 360 0" repeat="indefinite" delay="0"
-          easing="linear"></a-animation>
       </a-entity>
-      <a-entity position="0 0 0">
-        <a-sphere scale="1 1 1" position="-10 1 0" id="Earth"
-          src="https://raw.githubusercontent.com/EmleeAnderson/image-hosting/master/EARTH.jpg">
-          <a-sphere scale="0.25 0.25 0.25" position="0 0 -2" id="Earths-moon"
-            src="https://raw.githubusercontent.com/EmleeAnderson/image-hosting/master/Earths%20moon.jpg">
-            <a-animation attribute="rotation" dur="2000" from="0 1 -4" to="0 360 0" repeat="indefinite" delay="0"
-              easing="linear"></a-animation>
+      <a-entity animation="property:rotation; dur: 5000; from: 0 0 0; to: 0 360 0; loop: true; delay: 0; easing: linear"
+        position="0 0 0">
+        <a-sphere
+          animation="property:rotation; dur: 5000; from: 0 0 0; to: 0 360 0; loop: true; delay: 0; easing: linear"
+          scale="1 1 1" position="-10 1 0" id="Earth" src="./assets/earth.jpg">
+          <a-sphere
+            animation="property:rotation; dur: 2000; from: 0 0 0; to: 0 360 0; loop: true; delay: 0; easing: linear"
+            scale="0.25 0.25 0.25" position="0 0 -2" id="Earths-moon" src="./assets/moon.jpg">
           </a-sphere>
-          <a-animation attribute="rotation" dur="5000" from="0 0 0" to="0 360 0" repeat="indefinite" delay="0"
-            easing="linear"></a-animation>
-          <a-animation attribute="rotation" dur="2000" from="0 0 0" to="0 360 0" repeat="indefinite" delay="0"
-            easing="linear"></a-animation>
         </a-sphere>
-        <a-animation attribute="rotation" dur="5000" from="0 0 0" to="0 360 0" repeat="indefinite" delay="0"
-          easing="linear"></a-animation>
       </a-entity>
-      <a-entity>
-        <a-sphere scale="9.5 9.5 9.5" position="-96 1 0" id="Saturn"
-          src="https://raw.githubusercontent.com/EmleeAnderson/image-hosting/master/Saturn.jpg">
-          <a-animation attribute="rotation" dur="2000" from="0 0 0" to="0 360 0" repeat="indefinite" delay="0"
-            easing="linear"></a-animation>
+      <a-entity
+        animation="property:rotation; dur: 7000; from: 0 0 0; to: 0 360 0; loop: true; delay: 0; easing: linear">
+        <a-sphere
+          animation="property:rotation; dur: 2000; from: 0 0 0; to: 0 360 0; loop: true; delay: 0; easing: linear"
+          scale="9.5 9.5 9.5" position="-96 1 0" id="Saturn" src="./assets/saturn.jpg">
         </a-sphere>
-        <a-animation attribute="rotation" dur="7000" from="0 0 0" to="0 360 0" repeat="indefinite" delay="0"
-          easing="linear"></a-animation>
       </a-entity>
-      <a-entity>
-        <a-sphere scale=".5 .5 .5" position="-15 1 0" id="Mars"
-          src="https://raw.githubusercontent.com/EmleeAnderson/image-hosting/master/MARS.jpg">
-          <a-animation attribute="rotation" dur="2000" from="0 0 0" to="0 360 0" repeat="indefinite" delay="0"
-            easing="linear"></a-animation>
+      <a-entity
+        animation="property:rotation; dur: 5200; from: 0 0 0; to: 0 360 0; loop: true; delay: 0; easing: linear">
+        <a-sphere
+          animation="property:rotation; dur: 2000; from: 0 0 0; to: 0 360 0; loop: true; delay: 0; easing: linear"
+          scale=".5 .5 .5" position="-15 1 0" id="Mars" src="./assets/mars.jpg">
         </a-sphere>
-        <a-animation attribute="rotation" dur="5200" from="0 0 0" to="0 360 0" repeat="indefinite" delay="0"
-          easing="linear"></a-animation>
       </a-entity>
 
-      <a-entity>
-        <a-sphere scale="11.2 11.2 11.2" position="-52 1 0" id="jupiter"
-          src="https://spaceshw.github.io/image/jupiter.jpg">
-          <a-animation attribute="rotation" dur="2000" from="0 0 0" to="0 360 0" repeat="indefinite" delay="0"
-            easing="linear"></a-animation>
+      <a-entity
+        animation="property:rotation; dur: 5500; from: 0 0 0; to: 0 360 0; loop: true; delay: 0; easing: linear">
+        <a-sphere
+          animation="property:rotation; dur: 2000; from: 0 0 0; to: 0 360 0; loop: true; delay: 0; easing: linear"
+          scale="11.2 11.2 11.2" position="-52 1 0" id="Jupiter" src="./assets/jupiter.jpg">
         </a-sphere>
-        <a-animation attribute="rotation" dur="5500" from="0 0 0" to="0 360 0" repeat="indefinite" delay="0"
-          easing="linear"></a-animation>
       </a-entity>
-      <a-entity>
-        <a-sphere scale="3.9 3.9 3.9" position="-301 1 0" id="Neptune"
-          src="https://raw.githubusercontent.com/EmleeAnderson/image-hosting/master/2k_neptune.jpg">
-          <a-animation attribute="rotation" dur="2000" from="0 0 0" to="0 360 0" repeat="indefinite" delay="0"
-            easing="linear"></a-animation>
+      <a-entity
+        animation="property:rotation; dur: 10000; from: 0 0 0; to: 0 360 0; loop: true; delay: 0; easing: linear">
+        <a-sphere
+          animation="property:rotation; dur: 2000; from: 0 0 0; to: 0 360 0; loop: true; delay: 0; easing: linear"
+          scale="3.9 3.9 3.9" position="-301 1 0" id="Neptune" src="./assets/neptune.png">
         </a-sphere>
-        <a-animation attribute="rotation" dur="100000" from="0 0 0" to="0 360 0" repeat="indefinite" delay="0"
-          easing="linear"></a-animation>
       </a-entity>
 
-      <a-entity>
-        <a-sphere scale="4 4 4" position="-192 1 0" id="Uranus"
+      <a-entity
+        animation="property:rotation; dur: 84000; from: 0 0 0; to: 0 360 0; loop: true; delay: 0; easing: linear">
+        <a-sphere
+          animation="property:rotation; dur: 2000; from: 0 0 0; to: 0 360 0; loop: true; delay: 0; easing: linear"
+          scale="4 4 4" position="-192 1 0" id="Uranus"
           src="https://raw.githubusercontent.com/EmleeAnderson/image-hosting/master/Uranus.jpg">
-          <a-animation attribute="rotation" dur="2000" from="0 0 0" to="0 360 0" repeat="indefinite" delay="0"
-            easing="linear"></a-animation>
         </a-sphere>
-        <a-animation attribute="rotation" dur="84000" from="0 0 0" to="0 360 0" repeat="indefinite" delay="0"
-          easing="linear"></a-animation>
       </a-entity>
 
     </a-marker-camera>
